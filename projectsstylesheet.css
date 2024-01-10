@@ -1,0 +1,193 @@
+/* projectsstylesheet.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #BBC1D3;
+}
+
+.header {
+    text-align: center;
+    background-color: #8C94AE; /* Add background color if needed */
+    margin-bottom: 30px;
+}
+
+.header-block {
+    width: 1700px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
+    background-color: #8C94AE; /* Set the background color */
+}
+
+.Welcome {
+    position: relative;
+    display: inline-block;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #E0E0E2; /* Text color */
+    font-size: 95px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    z-index: 2;
+}
+.courses-button {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 120px; /* Adjust the right position as needed */
+    padding: 10px 15px;
+    color: #E0E0E2; /* Button text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+     z-index: 3; /* Increase z-index to ensure the button is above the image overlay */
+}
+
+/* Add this style to underline the button on hover */
+.courses-button:hover {
+    text-decoration: underline;
+    background-color: #B0B8D1; /* Adjust the hover background color if needed */
+}
+.home-button {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    padding: 10px 15px;
+    color: #E0E0E2; /* Button text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 3; /* Increase z-index to ensure the button is above the image overlay */
+    font-size: 20px;
+
+}
+/* Add this style to underline the button on hover */
+.home-button:hover {
+    text-decoration: underline;
+    background-color: #B0B8D1; /* Adjust the hover background color if needed */
+}
+.projects-button {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 260px; /* Adjust the right position as needed */
+    padding: 10px 15px;
+    color: #E0E0E2; /* Button text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+     z-index: 3; /* Increase z-index to ensure the button is above the image overlay */
+}
+
+.projects-button:hover {
+    text-decoration: underline;
+    background-color: #B0B8D1; /* Adjust the hover background color if needed */
+}
+.content-box {
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-box h2 {
+    font-size: 28px;
+    font-family: 'Helvetica', sans-serif; /* Change to your preferred font family */
+    color: #333;
+}
+
+.content-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Georgia', serif; /* Change to your preferred font family */
+    color: #666;
+}
+
+/* Additional styles for links (if needed) */
+.content-box a {
+    color: #007BFF;
+    text-decoration: underline;
+}
+.content-box li {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Georgia', serif; /* Change to your preferred font family */
+    color: #666;
+}
+.content-box strong {
+    font-weight: bold;
+    color: #666;
+}
+
+.left-box {
+    width: 60%;
+    background-color: #E0E0E2;
+    float: left;
+    margin-left: 50px;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+.right-box {
+    width: 30%;
+    background-color: #E0E0E2;
+    float: right;
+    margin-right: 50px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.image-box {
+    width: 30%;
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-box::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.image-box:hover::before {
+    opacity: 1;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-box-1::before {
+    background-image: url('hover NLP-Based Book Recommendation Engine.png');
+}
+
+.image-box-2::before {
+    background-image: url('hover Airline database application.png');
+}
+
+.image-box-3::before {
+    background-image: url('hover other projects.png');
+}
