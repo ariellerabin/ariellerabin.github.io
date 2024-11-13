@@ -181,7 +181,7 @@ body {
     grid-template-columns: repeat(2, 1fr); 
     margin: 5px;
     padding: 0; 
-    max-width: 820px;
+    max-width: 50%;
 }
 
 .image-box-1, .image-box-2, .image-box-3, .image-box-4 {
@@ -230,13 +230,13 @@ body {
     opacity: 1;
 }
 .graph-container {
-    max-width: 40%; /* Adjust the width of the graph container */
+    max-width: 50%; /* Adjust the width of the graph container */
 }
 
 .graph-container img {
     margin-left: 100px;
-    width: 100%; /* Make the graph image responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
 }
 .content-wrapper {
     display: flex; /* Use flexbox for horizontal alignment */
