@@ -12,7 +12,7 @@ body {
 }
 
 .header-block {
-    width: 1700px; /* Set the desired width */
+    width: 1700px; 
     height: 150px; /* Set the desired height */
     background-color: #8C94AE; /* Set the background color */
 }
@@ -28,10 +28,25 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #E0E0E2; /* Text color */
-    font-size: 95px; /* Adjust font size as needed */
+    font-size: 75px; /* Adjust font size as needed */
     font-weight: bold; /* Adjust font weight as needed */
     z-index: 2;
 }
+.courses-button {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 120px; /* Adjust the right position as needed */
+    padding: 10px 15px;
+    color: #E0E0E2; /* Button text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+     z-index: 3; /* Increase z-index to ensure the button is above the image overlay */
+}
+
 .courses-button {
     position: absolute;
     top: 20px; /* Adjust the top position as needed */
@@ -123,7 +138,7 @@ body {
 .content-box p {
     font-size: 16px;
     line-height: 1.6;
-    font-family: 'Georgia', serif; /* Change to your preferred font family */
+    font-family: 'Georgia', serif; 
     color: #666;
 }
 
@@ -135,7 +150,7 @@ body {
 .content-box li {
     font-size: 16px;
     line-height: 1.6;
-    font-family: 'Georgia', serif; /* Change to your preferred font family */
+    font-family: 'Georgia', serif; 
     color: #666;
 }
 .content-box strong {
@@ -159,24 +174,34 @@ body {
     margin-left: 25px;
     margin-top: 25px;
 }
+
 .image-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 10px;
+    display: grid;
+    gap: 5px; 
+    grid-template-columns: repeat(2, 1fr); 
+    margin: 5px;
+    padding: 0; 
+    max-width: 820px;
 }
 
-.image-box {
-    width: 30%;
-    margin: 0 10px;
+.image-box-1, .image-box-2, .image-box-3, .image-box-4 {
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-.image-box::before {
+
+.image-box-1 img, .image-box-2 img, .image-box-3 img, .image-box-4 img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.image-box-1::before, .image-box-2::before, .image-box-3::before, .image-box-4::before {
     content: '';
     display: block;
     width: 100%;
-    height: 100%;
+    height: 100%; 
     position: absolute;
     top: 0;
     left: 0;
@@ -187,24 +212,68 @@ body {
     opacity: 0;
 }
 
-.image-box:hover::before {
+/* Ensure hover effect only shows relevant image overlay */
+.image-box-1:hover::before {
+    background-image: url('Hover MITLL1.png');
     opacity: 1;
 }
-
-.image-box img {
-    width: 100%;
-    height: auto;
-    display: block;
+.image-box-2:hover::before {
+    background-image: url('Copy of MITLL2.png');
+    opacity: 1;
+}
+.image-box-3:hover::before, .image-box-4:hover::before {
+    background-image: url('Hover MITLL3.png');
+    opacity: 1;
+}
+.image-box-4:hover::before, .image-box-4:hover::before {
+    background-image: url('Hover MITLL4.png');
+    opacity: 1;
+}
+.graph-container {
+    max-width: 40%; /* Adjust the width of the graph container */
 }
 
-.image-box-1::before {
-    background-image: url('hover NLP-Based Book Recommendation Engine.png');
+.graph-container img {
+    margin-left: 100px;
+    width: 100%; /* Make the graph image responsive */
+    height: auto; /* Maintain aspect ratio */
 }
+.content-wrapper {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Add space between the grid and the graph */
+}
+.bubble {
+    fill: #4C5564;  /* Dark gray-blue for bubbles */
+    opacity: 0.9;
+  }
+  .bubble-label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-anchor: middle;
+    fill: white; 
+  }
+  .tooltip {
+    position: absolute;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
 
-.image-box-2::before {
-    background-image: url('hover Airline database application.png');
-}
+.title-text{
+    font-size: 42px;
+    margin-left:17%;
+    color: white;
 
-.image-box-3::before {
-    background-image: url('hover other projects.png');
-}
+  }
+  .caption-text{
+    font-size: 22px;
+    margin-left:33%;
+    color: white;
+
+  }
