@@ -111,8 +111,8 @@ body {
 
 .coop-button {
     position: absolute;
-    top: 20px; /* Adjust the top position as needed */
-    right: 7%; /* Adjust the right position as needed */
+    top: 20px;
+    right: 7%; 
     padding: 10px 15px;
     color: #E0E0E2; /* Button text color */
     text-decoration: none;
