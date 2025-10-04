@@ -1,0 +1,137 @@
+/* Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Base styles */
+  body {
+    font-family: Arial, sans-serif;
+    background: #eaeaea; /* light grey background */
+    color: #222;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #555;
+  }
+  
+  /* Hero section */
+  .hero {
+    background-image: url('images/header-budapest.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+  }
+  
+  /* Content sections */
+  main {
+    padding: 60px 0;
+  }
+  
+  .content-section {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px auto;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-top: -12%;
+  }
+  .content-section-second {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px auto;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  .content-section-third {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px auto;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .content-section.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .content-section, .content-section-second, .content-section-third .text {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .content-section, .content-section-second, .content-section-third  .image {
+    flex: 1;
+  }
+  
+  .content-section .image img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    display: block;
+    justify-content: flex-start;
+    margin-left: auto;
+
+  }
+  .content-section-second .image img {
+    width: 40%;
+    height: 35%;
+    object-fit: cover;
+    display: block;
+    justify-content: flex-end;
+    margin-right: auto;
+
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 800px) {
+    .content-section,
+    .content-section.reverse {
+      flex-direction: column;
+    }
+    .content-section .image,
+    .content-section .text {
+      width: 100%;
+    }
+  }
+  
